@@ -78,6 +78,12 @@
             <version>2.5.0</version>
         </dependency>
 
+        <!-- Session缓存设置 -->
+        <dependency>
+            <groupId>org.springframework.session</groupId>
+            <artifactId>spring-session-data-redis</artifactId>
+        </dependency>
+
     </dependencies>
 
 	<build>

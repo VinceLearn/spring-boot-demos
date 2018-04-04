@@ -9,6 +9,9 @@ import org.springframework.web.bind.annotation.RestController;
 import xin.keepmoving.web.domain.User;
 import xin.keepmoving.web.domain.UserRepository;
 
+import javax.servlet.http.HttpSession;
+import java.util.UUID;
+
 /**
  * @author: Zhourl
  * @description: spring-boot-demos
@@ -50,5 +53,16 @@ public class HelloWorldController {
             msg = "fail";
         }
         return msg;
+    }
+
+    @RequestMapping("/uid")
+    public String uid(HttpSession session) {
+        UUID uid = (UUID) session.getAttribute("uid");
+        if (uid == null) {
+            uid = UUID.randomUUID();
+        }
+
+        session.setAttribute("uid", uid);
+        return session.getId();
     }
 }
