@@ -37,4 +37,16 @@ public class UserRepositoryTests {
         Assert.assertEquals(3, userRepository.findAll().size());
         userRepository.delete(userRepository.findByUsername("aa"));
     }
+
+    @Test
+    public void saveChineseTest() {
+        userRepository.save(new User("中文", "123456", "aa@163.com"));
+        Assert.assertNotNull(userRepository.findByUsername("中文"));
+    }
+
+    @Test
+    public void findByUsernameTest() {
+        User user = userRepository.findByUsername("bb");
+        Assert.assertNotNull(user);
+    }
 }
