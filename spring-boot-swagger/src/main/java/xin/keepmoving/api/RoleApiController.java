@@ -21,7 +21,7 @@ import java.util.Map;
  * @version: 1.0
  * @date: 2018-04-17 10:18
  */
-@Api(value = "roleapi", tags = {"role", "用户"})
+@Api(tags = {"role", "用户"}, protocols = "http")
 @RestController
 @RequestMapping("/api/role")
 public class RoleApiController {

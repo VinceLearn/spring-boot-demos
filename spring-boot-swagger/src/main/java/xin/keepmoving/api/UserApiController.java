@@ -18,7 +18,7 @@ import java.util.*;
  * @version: 1.0
  * @date: 2018-04-08 9:43
  */
-@Api(value = "apiuser", tags = {"用户", "API"})
+@Api(tags = {"用户", "API"})
 @RestController
 @RequestMapping("/api/user")
 public class UserApiController {
