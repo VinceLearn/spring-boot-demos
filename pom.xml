@@ -6,7 +6,7 @@
     <groupId>xin.keepmoving</groupId>
     <artifactId>spring-boot-demos</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <packaging>jar</packaging>
+    <packaging>pom</packaging>
 
     <name>spring-boot-demos</name>
     <description>Demo project for Spring Boot</description>
@@ -23,5 +23,21 @@
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <java.version>1.8</java.version>
     </properties>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
+
+    <modules>
+        <module>spring-boot-helloworld</module>
+        <module>spring-boot-web</module>
+        <module>spring-boot-thymeleaf</module>
+        <module>spring-boot-swagger</module>
+    </modules>
 
 </project>
